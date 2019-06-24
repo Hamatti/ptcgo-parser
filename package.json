@@ -1,6 +1,6 @@
 {
   "name": "ptcgo-parser",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Parser for Pokemon TCG Online decklists",
   "repository": "hamatti/ptcgo-parser",
   "main": "lib/index.js",
