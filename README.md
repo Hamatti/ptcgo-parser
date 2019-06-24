@@ -93,7 +93,7 @@ where `[version_bump]` is either
 All forms of contributions are welcomed!
 
 - Did you notice a bug? Open an issue!
-- Is there a mistake in PTCGO -> PokemonTCG.io id mapping? Open an issue or add it to `/lib/exceptions.js` and open a Pull Request!
+- Is there a mistake in PTCGO -> PokemonTCG.io id mapping? Open an issue (functionality to fix these directly upcoming!).
 - New functionality? Feel free to open an issue (and optionally start developing the solution and create a PR).
 
 ## Versioning
