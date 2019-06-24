@@ -1,5 +1,7 @@
 # PTCGO Parser
 
+![npm](https://img.shields.io/npm/v/ptcgo-parser.svg?style=plastic)
+
 Javascript library to transform Pokemon TCG Online decklist exports into Javascript objects with [PokemonTCG.io API](https://pokemontcg.io) compatible ids to help you building tools that PTCGO players can use.
 
 ### Installing
