@@ -1,5 +1,8 @@
 const PTCGOParser = require("../lib/index.js");
 
+const pick = (decklist, card_name) =>
+  decklist.cards.filter(card => card.name === card_name)[0];
+
 const exported_list = `****** Pokémon Trading Card Game Deck List ******
 
 ##Pokémon - 13
@@ -74,7 +77,7 @@ describe("ptcgo-parser", () => {
   it("should parse Oranguru correctly", () => {
     const decklist = PTCGOParser.parse(exported_list);
 
-    const oranguru = decklist.cards.filter(card => card.name === "Oranguru")[0];
+    const oranguru = pick(decklist, "Oranguru");
 
     expect(oranguru.name).toBe("Oranguru");
     expect(oranguru.amount).toBe("1");
@@ -85,9 +88,7 @@ describe("ptcgo-parser", () => {
   it("should work with cards without leading asterisk", () => {
     const decklist = PTCGOParser.parse(exported_list);
 
-    const card = decklist.cards.filter(
-      card => card.name === "Special Charge"
-    )[0];
+    const card = pick(decklist, "Special Charge");
 
     expect(card.name).toBe("Special Charge");
     expect(card.amount).toBe("1");
@@ -98,7 +99,7 @@ describe("ptcgo-parser", () => {
   it("should parse correctly basic energy without set code", () => {
     const decklist = PTCGOParser.parse(exported_list);
 
-    const card = decklist.cards.filter(card => card.name === "Darkness")[0];
+    const card = pick(decklist, "Darkness");
 
     expect(card.name).toBe("Darkness");
     expect(card.amount).toBe("11");
@@ -109,7 +110,7 @@ describe("ptcgo-parser", () => {
   it("should parse correctly basic energy with a set code", () => {
     const decklist = PTCGOParser.parse(exported_list);
 
-    const card = decklist.cards.filter(card => card.name === "Water")[0];
+    const card = pick(decklist, "Water");
 
     expect(card.name).toBe("Water");
     expect(card.amount).toBe("4");
@@ -120,9 +121,7 @@ describe("ptcgo-parser", () => {
   it("should parse correctly special energy with a set code", () => {
     const decklist = PTCGOParser.parse(exported_list);
 
-    const card = decklist.cards.filter(
-      card => card.name === "Double Dragon Energy"
-    )[0];
+    const card = pick(decklist, "Double Dragon Energy");
 
     expect(card.name).toBe("Double Dragon Energy");
     expect(card.amount).toBe("4");
@@ -133,7 +132,7 @@ describe("ptcgo-parser", () => {
   it("should parse correctly SM promo", () => {
     const decklist = PTCGOParser.parse(promo_deck);
 
-    const card = decklist.cards.filter(card => card.name === "Tapu Koko")[0];
+    const card = pick(decklist, "Tapu Koko");
 
     expect(card.name).toBe("Tapu Koko");
     expect(card.amount).toBe("1");
