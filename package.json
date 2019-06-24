@@ -1,0 +1,19 @@
+{
+  "name": "ptcgo-parser",
+  "version": "1.0.0",
+  "description": "Parser for Pokemon TCG Online decklists",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "keywords": [
+    "pokemon",
+    "ptcgo",
+    "parser"
+  ],
+  "author": "Juha-Matti Santala <juhamattisantala@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^3.4.0"
+  }
+}
